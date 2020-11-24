@@ -1,5 +1,6 @@
 package com.eflagcomm.android_jetpack_kotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.eflagcomm.android_jetpack_kotlin.R.color.purple_700
 import com.eflagcomm.android_jetpack_kotlin.adapter.CatalogAdapter
+import com.eflagcomm.android_jetpack_kotlin.lifeCycle.LifeCycleActivity
 import com.eflagcomm.android_jetpack_kotlin.model.CatalogModel
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -41,12 +43,15 @@ class MainActivity : AppCompatActivity() {
 
                 when (position) {
 
+
                     0 -> {
 
                     }
 
                     1 -> {
 
+                        intent = Intent(this@MainActivity,LifeCycleActivity::class.java)
+                        startActivity(intent)
                     }
 
                     2 -> {
