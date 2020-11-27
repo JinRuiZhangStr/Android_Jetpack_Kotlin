@@ -3,6 +3,7 @@ package com.eflagcomm.android_jetpack_kotlin
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
@@ -11,8 +12,11 @@ import com.eflagcomm.android_jetpack_kotlin.R.color.purple_700
 import com.eflagcomm.android_jetpack_kotlin.adapter.CatalogAdapter
 import com.eflagcomm.android_jetpack_kotlin.lifeCycle.LifeCycleActivity
 import com.eflagcomm.android_jetpack_kotlin.model.CatalogModel
+import com.eflagcomm.android_jetpack_kotlin.sndemo.PcListActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_title_bar.*
 
+private const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +28,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun initView() {
         toolbar.title = "目录"
-        toolbar.setTitleTextColor(resources.getColor(R.color.white))
-        toolbar.setBackgroundColor(resources.getColor(purple_700))
         //设置导航图标要在 setSupportActionBar 之后
 //        setSupportActionBar(toolbar)
         toolbar.navigationIcon = resources.getDrawable(R.mipmap.ic_catalog)
@@ -41,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         catalogAdapter.setOnItemClickListener(object :OnItemClickListener{
             override fun onItemClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
 
+                Log.e(TAG, "onItemClick: "+position )
                 when (position) {
 
 
@@ -84,6 +87,11 @@ class MainActivity : AppCompatActivity() {
 
                     9 -> {
 
+                    }
+
+                    10 -> {
+                        intent = Intent(this@MainActivity,PcListActivity::class.java)
+                        startActivity(intent)
                     }
 
                 }
