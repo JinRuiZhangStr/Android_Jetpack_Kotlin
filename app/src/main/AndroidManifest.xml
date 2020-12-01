@@ -19,6 +19,8 @@
 
         <activity android:name=".lifeCycle.LifeCycleActivity"></activity>
 
+        <activity android:name=".viewmodel.ViewModelActivity"></activity>
+
         <activity android:name=".sndemo.PcListActivity"></activity>
 
         <activity android:name=".sndemo.AddPcUnitActivity"></activity>

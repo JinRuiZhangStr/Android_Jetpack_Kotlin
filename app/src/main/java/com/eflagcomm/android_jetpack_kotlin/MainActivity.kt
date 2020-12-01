@@ -13,6 +13,7 @@ import com.eflagcomm.android_jetpack_kotlin.adapter.CatalogAdapter
 import com.eflagcomm.android_jetpack_kotlin.lifeCycle.LifeCycleActivity
 import com.eflagcomm.android_jetpack_kotlin.model.CatalogModel
 import com.eflagcomm.android_jetpack_kotlin.sndemo.PcListActivity
+import com.eflagcomm.android_jetpack_kotlin.viewmodel.ViewModelActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_title_bar.*
 
@@ -62,7 +63,8 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     3 -> {
-
+                        intent = Intent(this@MainActivity,ViewModelActivity::class.java)
+                        startActivity(intent)
                     }
 
                     4 -> {
