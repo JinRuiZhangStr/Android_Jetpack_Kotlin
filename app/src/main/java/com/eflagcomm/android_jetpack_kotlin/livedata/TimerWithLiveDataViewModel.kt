@@ -14,11 +14,13 @@ class TimerWithLiveDataViewModel : ViewModel() {
     /**
      * LiveData 是一个抽象类，不能直接使用，通常使用的是它的子类 MutableLiveData
      */
-    private var currentSecond : MutableLiveData<Int> ?= null
+    private var currentSecond: MutableLiveData<Int>? = null
 
-    private  var timer : Timer? = null
+    private var second = 0
 
-    fun  getCurrentSecond() : MutableLiveData<Int> {
+    private var timer: Timer? = null
+
+    fun getCurrentSecond(): MutableLiveData<Int> {
 
         if (currentSecond == null) {
             currentSecond = MutableLiveData()
@@ -27,23 +29,19 @@ class TimerWithLiveDataViewModel : ViewModel() {
         return currentSecond!!
     }
 
-//    private fun getIntSecond():Int {
-//
-//    }
 
     fun startTiming() {
 
         if (timer == null) {
 
-            timer  = Timer()
-            currentSecond?.value = 0
+            timer = Timer()
             var timerTask = object : TimerTask() {
                 override fun run() {
-
+                    currentSecond?.postValue(second++)
 
                 }
             }
-            timer!!.schedule(timerTask,1000,1000)
+            timer!!.schedule(timerTask, 1000, 1000)
         }
 
     }

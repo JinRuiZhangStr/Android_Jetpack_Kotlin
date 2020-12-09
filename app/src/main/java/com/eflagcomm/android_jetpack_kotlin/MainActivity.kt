@@ -11,6 +11,7 @@ import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.eflagcomm.android_jetpack_kotlin.R.color.purple_700
 import com.eflagcomm.android_jetpack_kotlin.adapter.CatalogAdapter
 import com.eflagcomm.android_jetpack_kotlin.lifeCycle.LifeCycleActivity
+import com.eflagcomm.android_jetpack_kotlin.livedata.LiveDataActivity
 import com.eflagcomm.android_jetpack_kotlin.model.CatalogModel
 import com.eflagcomm.android_jetpack_kotlin.sndemo.PcListActivity
 import com.eflagcomm.android_jetpack_kotlin.viewmodel.ViewModelActivity
@@ -68,7 +69,8 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     4 -> {
-
+                        intent = Intent(this@MainActivity,LiveDataActivity::class.java)
+                        startActivity(intent)
                     }
 
                     5 -> {

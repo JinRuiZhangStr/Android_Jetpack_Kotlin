@@ -24,6 +24,8 @@
         <activity android:name=".sndemo.PcListActivity"></activity>
 
         <activity android:name=".sndemo.AddPcUnitActivity"></activity>
+
+        <activity android:name=".livedata.LiveDataActivity"></activity>
     </application>
 
 </manifest>
