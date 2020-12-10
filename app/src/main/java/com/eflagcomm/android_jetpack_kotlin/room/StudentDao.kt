@@ -1,0 +1,20 @@
+package com.eflagcomm.android_jetpack_kotlin.room
+
+import androidx.lifecycle.LiveData
+import androidx.room.*
+
+@Dao
+interface StudentDao {
+
+    @Insert
+    fun insertStudent(student: Student)
+
+    @Delete
+    fun  deleteStudent(student: Student)
+
+    @Update
+    fun  updateStudent(student: Student)
+
+    @Query("SELECT * FROM student")
+    fun queryStudent() : LiveData<MutableList<Student>>
+}

@@ -13,6 +13,7 @@ import com.eflagcomm.android_jetpack_kotlin.adapter.CatalogAdapter
 import com.eflagcomm.android_jetpack_kotlin.lifeCycle.LifeCycleActivity
 import com.eflagcomm.android_jetpack_kotlin.livedata.LiveDataActivity
 import com.eflagcomm.android_jetpack_kotlin.model.CatalogModel
+import com.eflagcomm.android_jetpack_kotlin.room.RoomActivity
 import com.eflagcomm.android_jetpack_kotlin.sndemo.PcListActivity
 import com.eflagcomm.android_jetpack_kotlin.viewmodel.ViewModelActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -74,7 +75,8 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     5 -> {
-
+                        intent = Intent(this@MainActivity,RoomActivity::class.java)
+                        startActivity(intent)
                     }
 
                     6 -> {

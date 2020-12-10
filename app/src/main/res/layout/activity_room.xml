@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <Button
+                android:id="@+id/btn_insert"
+                style="@style/CommonButtonStyle"
+                android:layout_weight="1"
+                android:text="增"/>
+
+
+            <Button
+                android:id="@+id/btn_delet"
+                style="@style/CommonButtonStyle"
+                android:layout_weight="1"
+                android:text="删"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <Button
+                android:id="@+id/btn_update"
+                style="@style/CommonButtonStyle"
+                android:layout_weight="1"
+                android:text="改"/>
+
+
+            <Button
+                android:id="@+id/btn_qurey"
+                style="@style/CommonButtonStyle"
+                android:layout_weight="1"
+                android:text="查"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_database"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+</LinearLayout>
