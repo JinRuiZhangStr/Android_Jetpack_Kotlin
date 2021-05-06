@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.viewholder.BaseViewHolder;
+import com.chad.library.adapter.base.BaseViewHolder;
 import com.eflagcomm.android_jetpack_kotlin.R;
 
 import org.jetbrains.annotations.NotNull;
@@ -14,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PcAdapter extends BaseQuickAdapter<PcAttributeBean,BaseViewHolder> {
+public class PcAdapter extends BaseQuickAdapter<PcAttributeBean, BaseViewHolder> {
 
     public PcAdapter(int layoutResId, @Nullable List<PcAttributeBean> data) {
         super(layoutResId, data);

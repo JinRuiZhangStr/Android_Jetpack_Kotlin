@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include android:id="@+id/titleBar"
+        layout="@layout/layout_title_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.eflagcomm.android_jetpack_kotlin.hilt.view.UserView
+        android:id="@+id/userView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:id="@+id/tv_animal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/userView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"/>
+
+    <com.eflagcomm.android_jetpack_kotlin.hilt.view.AnimalView
+        android:id="@+id/animalView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_animal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_provide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/animalView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="provide net"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

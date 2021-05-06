@@ -3,6 +3,7 @@ package com.eflagcomm.android_jetpack_kotlin.sndemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.PopupWindow;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,8 @@ public class PcListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pc_list);
         initView();
         initRecyAdapter();
+        PopupWindow popupWindow = new PopupWindow();
+//        popupWindow.showAtLocation();
     }
 
     private void initView() {
@@ -38,8 +41,9 @@ public class PcListActivity extends AppCompatActivity {
         recy = findViewById(R.id.recy);
         btnAdd = findViewById(R.id.btn_add);
         btnAdd.setOnClickListener(v -> {
-            Intent intent = new Intent(PcListActivity.this,AddPcUnitActivity.class);
-            startActivityForResult(intent,10000);
+            Intent intent = new Intent(PcListActivity.this,VideoPlayerActivity.class);
+//            startActivityForResult(intent,10000);
+            startActivity(intent);
         });
     }
 

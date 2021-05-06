@@ -3,7 +3,7 @@ package com.eflagcomm.android_jetpack_kotlin.adapter
 import androidx.annotation.LayoutRes
 import androidx.annotation.Nullable
 import com.chad.library.adapter.base.BaseQuickAdapter
-import com.chad.library.adapter.base.viewholder.BaseViewHolder
+import com.chad.library.adapter.base.BaseViewHolder
 import com.eflagcomm.android_jetpack_kotlin.R
 import com.eflagcomm.android_jetpack_kotlin.room.Student
 

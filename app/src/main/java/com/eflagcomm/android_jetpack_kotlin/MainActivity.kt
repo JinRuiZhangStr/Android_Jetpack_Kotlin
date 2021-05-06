@@ -7,13 +7,14 @@ import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
-import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.eflagcomm.android_jetpack_kotlin.R.color.purple_700
 import com.eflagcomm.android_jetpack_kotlin.adapter.CatalogAdapter
+import com.eflagcomm.android_jetpack_kotlin.hilt.HiltActivity
 import com.eflagcomm.android_jetpack_kotlin.lifeCycle.LifeCycleActivity
 import com.eflagcomm.android_jetpack_kotlin.livedata.LiveDataActivity
 import com.eflagcomm.android_jetpack_kotlin.model.CatalogModel
 import com.eflagcomm.android_jetpack_kotlin.room.RoomActivity
+import com.eflagcomm.android_jetpack_kotlin.sndemo.LeftSlipListActivity
 import com.eflagcomm.android_jetpack_kotlin.sndemo.PcListActivity
 import com.eflagcomm.android_jetpack_kotlin.viewmodel.ViewModelActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         var catalogAdapter = CatalogAdapter(R.layout.item_catalog,catalogList)
         recy.adapter = catalogAdapter
 
-        catalogAdapter.setOnItemClickListener(object :OnItemClickListener{
+        catalogAdapter.setOnItemClickListener(object : BaseQuickAdapter.OnItemClickListener {
             override fun onItemClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
 
                 Log.e(TAG, "onItemClick: "+position )
@@ -96,7 +97,12 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     10 -> {
-                        intent = Intent(this@MainActivity,PcListActivity::class.java)
+                        intent = Intent(this@MainActivity,LeftSlipListActivity::class.java)
+                        startActivity(intent)
+                    }
+
+                    11 -> {
+                        intent = Intent(this@MainActivity,HiltActivity::class.java)
                         startActivity(intent)
                     }
 
@@ -106,6 +112,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
 
     }
 

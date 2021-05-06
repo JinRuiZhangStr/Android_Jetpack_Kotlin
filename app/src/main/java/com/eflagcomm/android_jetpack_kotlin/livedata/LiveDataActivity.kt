@@ -12,8 +12,6 @@ class LiveDataActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_livedata)
-        toolbar.title = "LiveDataActivity"
-        toolbar.setNavigationOnClickListener { v -> finish() }
         iniCompant()
     }
 
