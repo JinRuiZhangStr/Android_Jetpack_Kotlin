@@ -58,8 +58,10 @@ class HiltActivity: AppCompatActivity(),CoroutineScope by MainScope() {
 
         btn_provide.setOnClickListener {
                 launch(Dispatchers.Main) {
-                    val repos = serviceApi.listRepos()
-                    tv_animal.text = repos.data[0].name
+//                    val repos = serviceApi.listRepos()
+//                    tv_animal.text = repos.data[0].name
+                    val repos = serviceApi.getLogin("297ed76a798df04501798e2f62d80077",1)
+                    Log.e(TAG, "initData: "+repos.success )
                 }
         }
     }

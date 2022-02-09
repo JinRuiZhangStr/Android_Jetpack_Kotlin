@@ -18,9 +18,10 @@ object CatalogModel {
         var mvvm = CatalogBean(9,"mvvm架构")
         var snDemo = CatalogBean(10,"snDemo")
         var hilt = CatalogBean(11,"hilt依赖")
+        var coroutine = CatalogBean(12,"coroutines协程")
 
         var catalogList = mutableListOf<CatalogBean>(firstKnowJpk,lifeCycle,navigation,viewModel,
-            liveData,room,workManager,dataBinding,paging, mvvm,snDemo,hilt)
+            liveData,room,workManager,dataBinding,paging, mvvm,snDemo,hilt,coroutine)
 
 
         return catalogList

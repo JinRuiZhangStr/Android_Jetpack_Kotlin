@@ -1,7 +1,6 @@
 package com.eflagcomm.android_jetpack_kotlin.hilt.bind.providers
 
-import
-dagger.Module
+import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
@@ -47,7 +46,7 @@ object NetworkModule {
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://www.wanandroid.com")
+            .baseUrl("http://36.110.84.86:7071/nm-app-store/")
             .client(okHttpClient)
             .build()
     }

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.eflagcomm.android_jetpack_kotlin.R.color.purple_700
 import com.eflagcomm.android_jetpack_kotlin.adapter.CatalogAdapter
+import com.eflagcomm.android_jetpack_kotlin.coroutines.CoroutinesActivity
 import com.eflagcomm.android_jetpack_kotlin.hilt.HiltActivity
 import com.eflagcomm.android_jetpack_kotlin.lifeCycle.LifeCycleActivity
 import com.eflagcomm.android_jetpack_kotlin.livedata.LiveDataActivity
@@ -85,7 +86,9 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     7 -> {
-
+                        intent = Intent()
+                        intent.setClassName(this@MainActivity,"com.eflagcomm.android_jetpack_kotlin.databind.DataBindActivity")
+                        startActivity(intent)
                     }
 
                     8 -> {
@@ -103,6 +106,11 @@ class MainActivity : AppCompatActivity() {
 
                     11 -> {
                         intent = Intent(this@MainActivity,HiltActivity::class.java)
+                        startActivity(intent)
+                    }
+
+                    12 -> {
+                        intent = Intent(this@MainActivity,CoroutinesActivity::class.java)
                         startActivity(intent)
                     }
 

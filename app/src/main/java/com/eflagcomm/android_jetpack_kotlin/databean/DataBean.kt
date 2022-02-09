@@ -30,3 +30,9 @@ data class Children(
     val userControlSetTop: Boolean,
     val visible: Int
 ) : Serializable
+
+data class RespO(
+    val success: Boolean,
+    val error: String,
+    val data: String
+)
